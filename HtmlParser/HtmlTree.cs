@@ -1,7 +1,6 @@
 public class HtmlTree {
 
-  public HtmlNode _root { get; init; }
-  public List<HtmlNode> _children; 
+  public HtmlNode _root { get; init; } 
 
   public HtmlTree() {
 
@@ -9,8 +8,16 @@ public class HtmlTree {
 	
   }
 
-   
+  // Search operations
 
-   
-  
+  public HtmlNode GetNodeByAttribute(string attributeName, string? attributeValue = null) {
+
+  }   
+
+  public HtmlNode GetNodeByAttributeAll(string attributeName, string? attributeValue = null) {
+
+  }
+
+    
+ 
 }
