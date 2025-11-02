@@ -12,7 +12,6 @@ public class WebsiteService {
     _client = client;
 
     // Ask yourself, why would you need these changes to the header?
-
     //_client.DefaultRequestHeaders.Clear();
     //_client.DefaultRequestHeaders.UserAgent.ParseAdd("Mozilla/5.0 (Windows NT 10.0; Win64; x64)");
     //_client.DefaultRequestHeaders.Accept.ParseAdd("text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8");
@@ -25,8 +24,16 @@ public class WebsiteService {
 
     HttpResponseMessage response = await _client.GetAsync(_uri.OriginalString);
     response.EnsureSuccessStatusCode();
+
+    string responseStr = await response.Content.ReadAsStringAsync();
+
+    #if DEBUG
+
+	//Console.WriteLine($"print debug");
+
+    #endif
   
-    return await response.Content.ReadAsStringAsync();  
+    return responseStr; 
 
   }
 

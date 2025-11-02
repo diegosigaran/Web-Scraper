@@ -11,11 +11,11 @@ public class HtmlTree {
   // Search operations
 
   public HtmlNode GetNodeByAttribute(string attributeName, string? attributeValue = null) {
-    return null;
+    return null!;
   }   
 
   public HtmlNode GetNodeByAttributeAll(string attributeName, string? attributeValue = null) {
-    return null;
+    return null!;
   }
 
     
