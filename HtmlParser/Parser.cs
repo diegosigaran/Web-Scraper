@@ -1,6 +1,10 @@
 public class Parser {
 
   public Parser(string htmlString) {
+	Console.WriteLine(htmlString);
+
+
+  	// CONSIDER USING A STACK TO PARSE
 
   }
 
@@ -8,7 +12,12 @@ public class Parser {
 
   }
 
-  
+  public string GetOpeningTag() {
+	return "";
+  } 
     
+  public string GetClosingTag() {
+       return "";
+  }
 
 }
